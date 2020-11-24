@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Lista de estudiantes</title>
+    </head>
+    <body>
+        <h1>Lista de estudiantes</h1>
+        {% if estudiantes %}
+            <ul>
+                {% for estudiante in estudiantes  %}
+                    <li><a href='http://127.0.0.1:8000/get_estudiantes/{{estudiante.id}}'>{{ estudiante.nombre }} </a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No existen datos</p>
+        {% endif %}
+    </body>
+</html>
